@@ -1,6 +1,6 @@
 # CCS Chart
 
-Live currency exchange rates from EUR to USD, AUD, GBP, and BRL in a bar chart format
+Live currency exchange rates between EUR USD, AUD, GBP, and BRL in a bar chart format
 
 ------
 
