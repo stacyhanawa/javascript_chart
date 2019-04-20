@@ -1,6 +1,6 @@
 # CCS Chart
 
-Currency exchange rates from EUR to USD, AUD, GBP, and BRL for 4/10/2019 in a bar chart format
+Live currency exchange rates from EUR to USD, AUD, GBP, and BRL in a bar chart format
 
 ------
 
