@@ -6,30 +6,30 @@ fetch("https://api.exchangeratesapi.io/latest")
         displayOutput(data)     
      });
     
+let displaycurrency = [
+            "USD",
+            "AUD",
+            "GBP",
+            "BRL",
+]
     
 function displayOutput(data) {     
-    let chart = document.querySelector(".BarChart");
+    let chart = document.querySelector(".BarChart");    
     chart.innerHTML = '';
     chart.innerHTML += `
-        <div class="BarChart-bar" style="height: ${100}%">
-            EUR<br>
-            1.00
-        </div>
-        <div class="BarChart-bar" style="height: ${data.rates.USD * 100}%">
-            USD<br>
-            ${data.rates.USD}
-        </div>
-        <div class="BarChart-bar" style="height: ${data.rates.AUD * 100}%">
-            AUD<br>
-            ${data.rates.AUD}
-        </div>
-        <div class="BarChart-bar" style="height: ${data.rates.GBP * 100}%">
-            GBP<br>
-            ${data.rates.GBP}
-        </div>
-        <div class="BarChart-bar" style="height: ${data.rates.BRL * 100}%">
-            BRL<br>
-            ${data.rates.BRL}
-        </div>
+    <div class="BarChart-bar" style="height: ${1 * 20}%">
+        EUR<br>
+        1.00
+    </div>
     `;
+    for (let currency of displaycurrency) {
+        let rate = data.rates[currency]
+        console.log(rate)
+        chart.innerHTML += `
+            <div class="BarChart-bar" style="height: ${rate * 20}%">
+                ${currency}<br>
+                ${rate}
+            </div>
+    `; 
+    }
 }
